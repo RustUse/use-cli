@@ -6,7 +6,7 @@ use std::io::{self, Write};
 /// Commonly used stderr primitives.
 pub mod prelude {
     pub use crate::{
-        write_error, write_error_line, write_stderr, write_stderr_line, StderrDestination,
+        StderrDestination, write_error, write_error_line, write_stderr, write_stderr_line,
     };
 }
 
@@ -63,7 +63,7 @@ pub fn write_error_line(mut writer: impl Write, text: &str) -> io::Result<()> {
 
 #[cfg(test)]
 mod tests {
-    use super::{write_error, write_error_line, StderrDestination};
+    use super::{StderrDestination, write_error, write_error_line};
 
     #[test]
     fn marker_is_copyable() {

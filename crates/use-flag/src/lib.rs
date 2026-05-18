@@ -30,7 +30,7 @@ impl fmt::Display for FlagNameError {
             Self::Empty => formatter.write_str("flag name cannot be empty"),
             Self::InvalidShortFlag => {
                 formatter.write_str("short flag must be one ASCII alphanumeric character")
-            }
+            },
             Self::InvalidLongFlagName => formatter.write_str(
                 "long flag name must be ASCII alphanumeric with optional internal hyphens",
             ),

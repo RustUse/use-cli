@@ -29,7 +29,7 @@ impl fmt::Display for EnvVarNameError {
             Self::Empty => formatter.write_str("environment variable name cannot be empty"),
             Self::StartsWithDigit => {
                 formatter.write_str("environment variable name cannot start with a digit")
-            }
+            },
             Self::InvalidCharacter => formatter.write_str(
                 "environment variable name must use ASCII letters, digits, and underscores",
             ),
@@ -142,13 +142,13 @@ impl fmt::Display for EnvVarReadError {
         match self {
             Self::NotPresent { name } => {
                 write!(formatter, "environment variable {name} is not set")
-            }
+            },
             Self::NotUnicode { name } => {
                 write!(
                     formatter,
                     "environment variable {name} is not valid Unicode"
                 )
-            }
+            },
         }
     }
 }

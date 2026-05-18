@@ -6,8 +6,8 @@ use std::io::{self, Write};
 /// Commonly used stdout primitives.
 pub mod prelude {
     pub use crate::{
-        apply_newline_behavior, write_line, write_stdout, write_stdout_line, write_text,
-        NewlineBehavior, StdoutDestination,
+        NewlineBehavior, StdoutDestination, apply_newline_behavior, write_line, write_stdout,
+        write_stdout_line, write_text,
     };
 }
 
@@ -97,7 +97,7 @@ fn ensure_trailing_newline(text: &str) -> String {
 #[cfg(test)]
 mod tests {
     use super::{
-        apply_newline_behavior, write_line, write_text, NewlineBehavior, StdoutDestination,
+        NewlineBehavior, StdoutDestination, apply_newline_behavior, write_line, write_text,
     };
 
     #[test]

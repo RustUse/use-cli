@@ -1,0 +1,99 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-arg"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-flag"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-option"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-env-var"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-exit-code"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-stdin"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-stdout"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-stderr"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-prompt"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-command-name"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-terminal"
+release = true
+version_group = "rustuse-cli"
+
+[[package]]
+name = "use-cli"
+release = true
+version_group = "rustuse-cli"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-arg",
+  "use-flag",
+  "use-option",
+  "use-env-var",
+  "use-exit-code",
+  "use-stdin",
+  "use-stdout",
+  "use-stderr",
+  "use-prompt",
+  "use-command-name",
+  "use-terminal",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

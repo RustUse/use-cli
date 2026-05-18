@@ -6,8 +6,8 @@ use core::fmt;
 /// Commonly used prompt primitives.
 pub mod prelude {
     pub use crate::{
-        is_no, is_yes, parse_confirmation, ConfirmationParseError, PromptText, PromptTextError,
-        YesNoAnswer,
+        ConfirmationParseError, PromptText, PromptTextError, YesNoAnswer, is_no, is_yes,
+        parse_confirmation,
     };
 }
 
@@ -150,8 +150,8 @@ pub fn is_no(input: &str) -> bool {
 #[cfg(test)]
 mod tests {
     use super::{
-        is_no, is_yes, parse_confirmation, ConfirmationParseError, PromptText, PromptTextError,
-        YesNoAnswer,
+        ConfirmationParseError, PromptText, PromptTextError, YesNoAnswer, is_no, is_yes,
+        parse_confirmation,
     };
 
     #[test]

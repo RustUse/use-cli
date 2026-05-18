@@ -31,10 +31,10 @@ impl fmt::Display for CommandNameError {
             Self::Empty => formatter.write_str("command name cannot be empty"),
             Self::ContainsSeparator => {
                 formatter.write_str("command name cannot contain path separators")
-            }
+            },
             Self::InvalidCharacter => {
                 formatter.write_str("command name cannot contain control characters")
-            }
+            },
             Self::NonUnicode => formatter.write_str("executable name is not valid Unicode"),
         }
     }
