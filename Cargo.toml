@@ -1,0 +1,56 @@
+[workspace]
+members = [
+    "crates/use-cli",
+    "crates/use-arg",
+    "crates/use-flag",
+    "crates/use-option",
+    "crates/use-env-var",
+    "crates/use-exit-code",
+    "crates/use-stdin",
+    "crates/use-stdout",
+    "crates/use-stderr",
+    "crates/use-prompt",
+    "crates/use-command-name",
+    "crates/use-terminal",
+]
+resolver = "3"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+version = "0.0.1"
+edition = "2024"
+rust-version = "1.95.0"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/RustUse/use-cli"
+homepage = "https://rustuse.org"
+documentation = "https://rustuse.org"
+publish = false
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-arg",
+    "use-flag",
+    "use-option",
+    "use-env-var",
+    "use-exit-code",
+    "use-stdin",
+    "use-stdout",
+    "use-stderr",
+    "use-prompt",
+    "use-command-name",
+    "use-terminal",
+    "use-cli",
+]
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "warn"
+multiple_crate_versions = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"

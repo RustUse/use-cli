@@ -1,0 +1,34 @@
+[package]
+name = "use-cli"
+description = "Facade crate for RustUse CLI-adjacent primitives"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-cli"
+keywords = ["cli", "args", "terminal", "facade", "rustuse"]
+categories = ["command-line-interface", "rust-patterns"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-arg = { version = "0.0.1", path = "../use-arg" }
+use-command-name = { version = "0.0.1", path = "../use-command-name" }
+use-env-var = { version = "0.0.1", path = "../use-env-var" }
+use-exit-code = { version = "0.0.1", path = "../use-exit-code" }
+use-flag = { version = "0.0.1", path = "../use-flag" }
+use-option = { version = "0.0.1", path = "../use-option" }
+use-prompt = { version = "0.0.1", path = "../use-prompt" }
+use-stderr = { version = "0.0.1", path = "../use-stderr" }
+use-stdin = { version = "0.0.1", path = "../use-stdin" }
+use-stdout = { version = "0.0.1", path = "../use-stdout" }
+use-terminal = { version = "0.0.1", path = "../use-terminal" }
+
+[lints]
+workspace = true

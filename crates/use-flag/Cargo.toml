@@ -1,0 +1,18 @@
+[package]
+name = "use-flag"
+description = "Primitive short and long flag types for RustUse CLI-adjacent code"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-flag"
+keywords = ["cli", "flag", "switch", "bool", "rustuse"]
+categories = ["command-line-interface", "rust-patterns"]
+
+[lints]
+workspace = true
