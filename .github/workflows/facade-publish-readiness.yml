@@ -21,7 +21,7 @@ jobs:
         use-arg use-flag use-option use-env-var use-exit-code use-stdin use-stdout use-stderr use-prompt use-command-name use-terminal
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install stable Rust toolchain
         uses: actions-rust-lang/setup-rust-toolchain@v1
